@@ -60,9 +60,10 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data for table `user`
 --
 
+
 INSERT INTO `user` (`id`, `firstName`, `lastName`, `password`, `username`) VALUES
-(1, 'John', 'Smith', '21232f297a57a5a743894a0e4a801fc3', 'john'),
-(2, 'Jane', 'Adams', 'ee11cbb19052e40b07aac0ca060c23ee', 'jane');
+(1, 'Richard', 'Gomez', '21232f297a57a5a743894a0e4a801fc3', 'richard'),
+(2, 'Lucy', 'Torres', 'ee11cbb19052e40b07aac0ca060c23ee', 'lucy');
 
 --
 -- Constraints for dumped tables
