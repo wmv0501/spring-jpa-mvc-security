@@ -8,7 +8,8 @@
 
 <body>
 	<jsp:include page="menu.jsp" />
-	<h1 id="banner">Home</h1>
+	<h1 id="banner">Home</h1><%=	 "Successfully authenticated. Security context contains: " +
+            SecurityContextHolder.getContext().getAuthentication()%>
 	<hr/>
 	
 	

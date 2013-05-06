@@ -7,6 +7,7 @@
 	<name>SpringMVC-Prototype-003</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
+
 	<properties>
 		<java-version>1.6</java-version>
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
@@ -18,20 +19,21 @@
 		<hibernate.entitymanager.version>3.6.3.Final</hibernate.entitymanager.version>
 		<hibernate.jpa-api.version>2.0-cr-1</hibernate.jpa-api.version>
 		<c3p0.version>0.9.1.2</c3p0.version>
+		<slf4j.version>1.6.1</slf4j.version>
 
 		<log4j.version>1.2.14</log4j.version>
 
 		<!-- <javax.servlet-api.version>2.5</javax.servlet-api.version> -->
 		<!-- <javax.jstl-taglibs.version>1.1.2</javax.jstl-taglibs.version> -->
 
-		<!-- <org.aspectj-version>1.6.10</org.aspectj-version> -->
-		<org.slf4j-version>1.6.6</org.slf4j-version>
+	
 
 		<!-- Testing -->
 		<mockito.version>1.8.5</mockito.version>
 		<junit.version>4.8.2</junit.version>
 
 	</properties>
+
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -73,6 +75,8 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+
+
 		<!-- A seamless aspect-oriented extension to the Java programming language -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -162,48 +166,41 @@
 			<version>${hibernate.entitymanager.version}</version>
 			<scope>compile</scope>
 		</dependency>
-		<!-- Logging -->
+		<!-- Logger -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- The Simple Logging Facade for Java or (SLF4J) serves as a simple facade 
+			or abstraction for various logging frameworks, e.g. java.util.logging, log4j 
+			and logback, allowing the end user to plug in the desired logging framework 
+			at deployment time. -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>${org.slf4j-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${org.slf4j-version}</version>
-			<scope>runtime</scope>
+			<version>${slf4j.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>${org.slf4j-version}</version>
-			<scope>runtime</scope>
+			<version>${slf4j.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
-			<exclusions>
-				<exclusion>
-					<groupId>javax.mail</groupId>
-					<artifactId>mail</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>javax.jms</groupId>
-					<artifactId>jms</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.sun.jdmk</groupId>
-					<artifactId>jmxtools</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.sun.jmx</groupId>
-					<artifactId>jmxri</artifactId>
-				</exclusion>
-			</exclusions>
-			<scope>runtime</scope>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
 		</dependency>
+
 
 		<!-- @Inject -->
 		<dependency>
