@@ -21,6 +21,7 @@
 		<param-value>
 		/WEB-INF/spring-security.xml
 		/WEB-INF/applicationContext.xml
+		classpath:applicationContext-security-preauth.xml
 		</param-value>
 	</context-param>
 

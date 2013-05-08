@@ -20,10 +20,12 @@
 		correct base-package -->
 	<context:component-scan base-package="com.sungard.proc" />
 
+	
 	<!-- Configures the annotation-driven Spring MVC Controller programming 
 		model. Note that, with Spring 3.0, this tag works in Servlet MVC only! -->
 	<mvc:annotation-driven />
 
+	<mvc:resources mapping="/resources/**" location="/resources/" /> 
 
 	
 	<!-- Imports logging configuration -->
